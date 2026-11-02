@@ -1,0 +1,10 @@
+import { fmtNpr } from '../../shared/money';
+export { fmtNpr };
+export const rs = (p: number, paisa = true) => 'Rs ' + fmtNpr(p, paisa);
+export const rsShort = (p: number) => { const r = p / 100; if (r >= 1e7) return 'Rs ' + (r / 1e7).toFixed(2).replace(/\.?0+$/, '') + ' Cr'; if (r >= 1e5) return 'Rs ' + (r / 1e5).toFixed(2).replace(/\.?0+$/, '') + ' L'; return 'Rs ' + fmtNpr(p, false); };
+const MON = ['Baishakh', 'Jestha', 'Ashadh', 'Shrawan', 'Bhadra', 'Ashwin', 'Kartik', 'Mangsir', 'Poush', 'Magh', 'Falgun', 'Chaitra'];
+export const bsPretty = (bs?: string | null) => { if (!bs) return ''; const [y, m, d] = bs.split('-').map(Number); return `${d} ${MON[m - 1]} ${y}`; };
+export const adPretty = (iso: string) => new Date(iso + 'T00:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+export const KIND_LABEL: Record<string, string> = { tax_invoice: 'Tax invoice', abbreviated: 'Abbreviated tax invoice', pan_bill: 'PAN bill' };
+export const STATUS_LABEL: Record<string, string> = { due: 'Due', partial: 'Part paid', overdue: 'Overdue', paid: 'Chukta', draft: 'Draft', void: 'Void' };
+export const METHOD_LABEL: Record<string, string> = { cash: 'Cash', bank: 'Bank transfer', esewa: 'eSewa', khalti: 'Khalti', fonepay: 'Fonepay QR', cheque: 'Cheque', other: 'Other' };
