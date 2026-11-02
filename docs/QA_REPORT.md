@@ -93,7 +93,7 @@ Live: https://chukta.sites.tab.bot/ · Repo: https://github.com/nabinbabuuranw/c
 | 30 | Missing Privacy | Pass | /privacy |
 
 ## Design QA
-- Palette applied through Tailwind tokens only (see DESIGN.md); contrast: body 13.2:1, muted 5.0:1, primary button 6.4:1, overdue 5.6:1.
+- Palette applied through Tailwind tokens only (see DESIGN.md); contrast on the #EBF2FA background: body 13.19:1, muted 4.99:1, partial 4.91:1, sage-deep 4.89:1, overdue 5.6:1; white on primary button 6.38:1 (all AA for normal text).
 - Focus: visible 2px Baltic outline on all controls; skip link; dialogs trap initial focus and close on Escape; every input has a real label.
 - Motion: hero rise on load; homepage sections reveal on scroll and hide again when scrolled back up; page fade-in on app route changes; animated aging/collection bars; stamp lands with a spring when a bill is paid; bottom sheet slides up. `prefers-reduced-motion: reduce` collapses all of it (E2E checked: animation-duration 1e-06s).
 - Mobile (390 px): no horizontal scroll on home or any app page (E2E measured scrollWidth); bottom tab bar + raised "New bill" button; tables hide secondary columns.

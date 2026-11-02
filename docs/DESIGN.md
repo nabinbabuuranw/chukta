@@ -49,7 +49,7 @@ Why Sky Blue Freshness: blue = trust and the blue ink/carbon of Nepali duplicate
 | Muted text | #4F6B7D | derived | labels, meta | 4.99:1 on bg ✓ |
 | Border | #C9D8E6 | derived | hairlines, table rules | — |
 | Overdue (semantic) | #A63D2A | derived, not in palette | overdue chip text/border only | 5.6:1 on bg ✓ |
-| Partial (semantic) | #8A6100 | derived | partly-paid chip | 5.0:1 on bg ✓ |
+| Partial (semantic) | #8A6100 | derived | partly-paid chip | 4.91:1 on bg, 5.29:1 on surface ✓ AA (re-measured; an earlier draft said 5.0) |
 
 ## 5. Typography (done)
 From the skill's "Financial Trust" pairing — one superfamily that covers both scripts, self-hosted (OFL, from Fontsource packages):
